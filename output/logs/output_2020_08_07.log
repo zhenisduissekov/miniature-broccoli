@@ -1,0 +1,133 @@
+07/08/2020 22:03:14 - [     main.py: 47 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 22:10:10 - [     main.py: 48 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 22:10:35 - [     main.py: 48 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 22:39:36 - [     main.py: 74 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 22:40:17 - [     main.py: 74 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 22:40:27 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Аренда
+07/08/2020 22:40:27 - [     main.py: 59 - callback_inline() ]- INFO - Запрос на Аренда
+07/08/2020 22:40:30 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Покупка
+07/08/2020 22:40:30 - [     main.py: 62 - callback_inline() ]- INFO - Запрос на Покупка
+07/08/2020 22:40:32 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Продажа
+07/08/2020 22:40:32 - [     main.py: 65 - callback_inline() ]- INFO - Запрос на Продажа
+07/08/2020 22:52:29 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Аренда
+07/08/2020 22:52:29 - [     main.py: 59 - callback_inline() ]- INFO - Запрос на Аренда
+07/08/2020 22:52:31 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Покупка
+07/08/2020 22:52:31 - [     main.py: 62 - callback_inline() ]- INFO - Запрос на Покупка
+07/08/2020 22:52:32 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Продажа
+07/08/2020 22:52:32 - [     main.py: 65 - callback_inline() ]- INFO - Запрос на Продажа
+07/08/2020 22:53:24 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 22:53:33 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Аренда
+07/08/2020 22:53:33 - [     main.py: 59 - callback_inline() ]- INFO - Запрос на Аренда
+07/08/2020 22:54:34 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 22:54:38 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Аренда
+07/08/2020 22:54:38 - [     main.py: 59 - callback_inline() ]- INFO - Запрос на Аренда
+07/08/2020 22:54:40 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 1-комната
+07/08/2020 22:54:42 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 2-комнаты
+07/08/2020 22:54:44 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 3-комнаты
+07/08/2020 22:56:41 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 3-комнаты
+07/08/2020 22:59:38 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Аренда
+07/08/2020 22:59:38 - [     main.py: 59 - callback_inline() ]- INFO - Запрос на Аренда
+07/08/2020 22:59:40 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 1-комната
+07/08/2020 22:59:53 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 1-комната
+07/08/2020 23:00:26 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Аренда
+07/08/2020 23:00:26 - [     main.py: 59 - callback_inline() ]- INFO - Запрос на Аренда
+07/08/2020 23:00:28 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 2-комнаты
+07/08/2020 23:00:29 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 2-комнаты
+07/08/2020 23:00:30 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 1-комната
+07/08/2020 23:00:34 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Аренда
+07/08/2020 23:00:34 - [     main.py: 59 - callback_inline() ]- INFO - Запрос на Аренда
+07/08/2020 23:00:34 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда 1-комната
+07/08/2020 23:00:37 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Покупка
+07/08/2020 23:00:37 - [     main.py: 67 - callback_inline() ]- INFO - Запрос на Покупка
+07/08/2020 23:00:42 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда Продажа
+07/08/2020 23:00:42 - [     main.py: 70 - callback_inline() ]- INFO - Запрос на Продажа
+07/08/2020 23:18:16 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:19:04 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:22:02 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:22:31 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:26:35 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:26:50 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда АРЕНДА
+07/08/2020 23:27:05 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:27:27 - [     main.py: 79 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:27:34 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда АРЕНДАAs
+07/08/2020 23:40:36 - [     main.py: 77 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:40:47 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда АРЕНДАAs
+07/08/2020 23:40:49 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда ПРОДАЖА
+07/08/2020 23:40:50 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда ПОКУПКА
+07/08/2020 23:40:53 - [     main.py: 56 - callback_inline() ]- INFO - Принята команда АРЕНДАAs
+07/08/2020 23:43:27 - [     main.py: 75 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:44:20 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:44:58 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:45:02 - [     util.py: 68 -          run() ]- ERROR - TypeError occurred, args=('string indices must be integers',)
+Traceback (most recent call last):
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/venv/lib/python3.8/site-packages/telebot/util.py", line 62, in run
+    task(*args, **kwargs)
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/main.py", line 50, in menu_command
+    markup.add(i['VALUE'])
+TypeError: string indices must be integers
+
+07/08/2020 23:45:21 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:45:24 - [     util.py: 68 -          run() ]- ERROR - TypeError occurred, args=('string indices must be integers',)
+Traceback (most recent call last):
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/venv/lib/python3.8/site-packages/telebot/util.py", line 62, in run
+    task(*args, **kwargs)
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/main.py", line 50, in menu_command
+    markup.add(i['VALUE'])
+TypeError: string indices must be integers
+
+07/08/2020 23:46:03 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:47:09 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:47:19 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:47:29 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:47:57 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:47:59 - [     util.py: 68 -          run() ]- ERROR - AttributeError occurred, args=("'dict' object has no attribute 'to_dict'",)
+Traceback (most recent call last):
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/venv/lib/python3.8/site-packages/telebot/util.py", line 62, in run
+    task(*args, **kwargs)
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/main.py", line 50, in menu_command
+    markup.add(config['MENU_1'])
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/venv/lib/python3.8/site-packages/telebot/types.py", line 829, in add
+    row.append(button.to_dict())
+AttributeError: 'dict' object has no attribute 'to_dict'
+
+07/08/2020 23:48:34 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:54:52 - [     main.py: 77 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:55:11 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:56:31 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:56:57 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:57:01 - [     util.py: 68 -          run() ]- ERROR - TypeError occurred, args=("send_message() got an unexpected keyword argument 'markup'",)
+Traceback (most recent call last):
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/venv/lib/python3.8/site-packages/telebot/util.py", line 62, in run
+    task(*args, **kwargs)
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/main.py", line 52, in menu_command
+    bot.send_message(message.chat.id, 'Что вас интересует?', markup=markup)
+TypeError: send_message() got an unexpected keyword argument 'markup'
+
+07/08/2020 23:57:20 - [     main.py: 76 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:58:59 - [     main.py: 86 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:59:03 - [     util.py: 68 -          run() ]- ERROR - AttributeError occurred, args=("'Message' object has no attribute 'chat_id'",)
+Traceback (most recent call last):
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/venv/lib/python3.8/site-packages/telebot/util.py", line 62, in run
+    task(*args, **kwargs)
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/main.py", line 56, in menu_command
+    bot.send_message(message.chat_id, message, reply_markup=markup)
+AttributeError: 'Message' object has no attribute 'chat_id'
+
+07/08/2020 23:59:26 - [     main.py: 86 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:59:30 - [     util.py: 68 -          run() ]- ERROR - AttributeError occurred, args=("'Message' object has no attribute 'chat_id'",)
+Traceback (most recent call last):
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/venv/lib/python3.8/site-packages/telebot/util.py", line 62, in run
+    task(*args, **kwargs)
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/main.py", line 56, in menu_command
+    bot.send_message(message.chat_id, message, reply_markup=markup)
+AttributeError: 'Message' object has no attribute 'chat_id'
+
+07/08/2020 23:59:48 - [     main.py: 86 -     <module>() ]- INFO - Телеграм бот запущен
+07/08/2020 23:59:52 - [     util.py: 68 -          run() ]- ERROR - AttributeError occurred, args=("'Message' object has no attribute 'chat_id'",)
+Traceback (most recent call last):
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/venv/lib/python3.8/site-packages/telebot/util.py", line 62, in run
+    task(*args, **kwargs)
+  File "/home/zhenisd/Yandex.Disk/pythonProjectSelenium/main.py", line 56, in menu_command
+    bot.send_message(message.chat_id, "message", reply_markup=markup)
+AttributeError: 'Message' object has no attribute 'chat_id'
+

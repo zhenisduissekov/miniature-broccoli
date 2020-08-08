@@ -1,0 +1,116 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+---
+TOKEN : '1134043221:AAEQ5Xsx_BQ7ibsgZ0SNjqK-yGni8esx6R0' # вставить токен своего бота
+ADMIN: 'zduissekov'  # ввести свой пользователь
+
+HOST : 'localhost'
+USER : 'root'
+PASSWORD : 'password'
+DB : 'mysql'
+CHARSET : 'utf8mb4'
+
+
+MENU_0 : # ACTION
+  - Выберете что вас интересует?
+  - АРЕНДА # https://krisha.kz/arenda/kvartiry/
+  - ПРОДАЖА # https://krisha.kz/prodazha/kvartiry/
+
+
+MENU_1 : # TYPE
+  - Какой тип недвижимости?
+  - КВАРТИРЫ # https://krisha.kz/arenda/kvartiry/ https://krisha.kz/prodazha/kvartiry/
+  - ДОМА # https://krisha.kz/prodazha/doma/
+  - КОМНАТЫ # https://krisha.kz/arenda/komnaty/
+  - ОФИСЫ
+  - ПОМЕЩЕНИЯ
+  - ЗДАНИЯ
+  - МАГАЗИНЫ И БУТИКИ # https://krisha.kz/arenda/magazina/kyzylorda/
+  - ПРОМБАЗЫ, СКЛАДЫ, ЗАВОДЫ
+  - ПРОЧАЯ НЕДВИЖИМОСТЬ
+  - ВОЗЬМУ В АРЕНДУ
+
+
+MENU_2:
+  - Выберете город?
+  - НУР-СУЛТАН
+  - АЛМАТЫ
+  - КЫЗЫЛОРДА
+
+
+MENU_3 : # ROOM NUMBER
+  - Сколько комнат?
+  - любой комнатности
+  - 1 комнатная
+  - 2 комнатная
+  - 3 комнатная
+  - 4 комнатная
+  - 5 и более комнат
+
+MENU_4: # RENT PERIOD
+  - На какой срок?
+  - по часам #  4 = hourly #  das[rent:period]=4
+  - суточно # 1 = daily
+  - помесячно # 2 = monthly
+  - поквартально # 3 = quarterly
+#
+MENU_5:
+  - C фото?
+  - C фото
+  - Нет
+
+MENU_6:
+  - От проверенных агенств?
+  - От проверенных агенств
+  - Нет
+
+MENU_7:
+  - От хозяев?
+  - От хозяев
+  - Нет
+
+#MENU_9:  #ASTANA
+#  - astana-almatinskij
+#  - astana-esilskij
+#  - astana-saryarkinskij
+#  - r-n-bajkonur
+#
+#MENU_10:  #ALMATY
+#  - almaty-aujezovskij
+#  - almaty-alatauskij
+#  - almaty-bostandykskij
+#  - almaty-zhetysuskij
+#  - almaty-medeuskij
+#  - almaty-nauryzbajskiy
+#  - almaty-turksibskij
+
+
+url_dict:  # TRANSLATE TO URL
+  АРЕНДА: arenda
+  ПРОДАЖА: prodazha
+  КВАРТИРЫ: kvartiry
+  ДОМА : doma
+  НУР-СУЛТАН : nur-sultan
+  АЛМАТЫ : almaty
+  КЫЗЫЛОРДА : kyzylorda
+
+params_dict:
+  по часам : das[rent:period]=4       #   4 = hourly
+  суточно : das[rent:period]=1        #   1 = daily
+  помесячно : das[rent:period]=2      #   2 = monthly
+  поквартально : das[rent:period]=3   # 3 = quarterly
+  1 комнатная : das[live:rooms]=1
+  2 комнатная : das[live:rooms]=2
+  3 комнатная : das[live:rooms]=3
+  4 комнатная : das[live:rooms]=4
+  5 и более комнат : das[live:rooms]=5
+  с фото? : das[_sys.hasphoto]=1  # has a photo?
+  от проверенных агенств : das[checked]=1  # from th owner
+  новостройки? : das[novostroiki]=1
+  от хозяев : das[who]=1  # from th owner
+
+#  das[live:square][from]=13
+#  das[live:square][to]=31
+#  das[price][from]=111
+#  das[price][to]=999&
