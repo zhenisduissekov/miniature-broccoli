@@ -6,7 +6,7 @@ import datetime
 import colorlog
 
 
-def logger_config(name=None):
+def LoggerConfig(name=None):
     if not name:
         log = logging.getLogger()  # root logger
     else:
@@ -27,7 +27,7 @@ def logger_config(name=None):
     return log
 
 
-def logger_config_with_output():
+def LoggerConfigWithOutput():
     log_formatter = logging.Formatter(
         "%(asctime)s - [%(filename)12s:%(lineno)3s - %(funcName)12s() ]- %(levelname)s - %(message)s",
         datefmt='%d/%m/%Y %H:%M:%S')
@@ -39,7 +39,7 @@ def logger_config_with_output():
     file_handler.setLevel(logging.INFO)
 
     # output to console
-    app_log = logger_config()
+    app_log = LoggerConfig()
 
     # output to file
     app_log.addHandler(file_handler)

@@ -4,7 +4,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 import logging
-
+import urllib
 
 class KrishaAds:
     def __init__(self):
@@ -23,11 +23,13 @@ class KrishaAds:
 
 
 class KrishaWeb:
-    def __init__(self, url):
+    def __init__(self, url, params):
         self.url = url
+        self.params = params
         self.bulk = None
         self.bulk_size = 0
         self.adverts = {}
+        self.max_pages = 0
 
         def get_max_page(gmp_soup):
             gmp_max = 0
@@ -53,21 +55,18 @@ class KrishaWeb:
             self.bulk_size = len(self.adverts)
             return pp_counter
 
-        request = requests.get(self.url) #, params=OPTIONS)
+        custom_url = url + '?page=' + str(params['page'])
+        for k in params.keys():
+            if k != 'page':
+                custom_url += '&' + k
 
+        request = requests.get(custom_url)
         logging.info(f'URL {request.url} [{request.status_code}]')
         if request.status_code == 200:
             html_text = request.content.decode()
             soup = BeautifulSoup(html_text, "html.parser")
-            counter = 0
-            max_pages = get_max_page(soup)
-            for page_i in range(1, 2):  # max_pages+1):
-                request = requests.get(url + '?page=' + str(page_i))
-                print(f'Request page={page_i} status={request.status_code}')
-                counter = parse_page(counter, soup)
-                print(f'Counter = {counter}')
+            self.max_pages = get_max_page(soup)
+            parse_page(0, soup)
         else:
             logging.error(f'Не правильный запрос')
-
-
 

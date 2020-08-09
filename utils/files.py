@@ -17,7 +17,7 @@ def load_config_yaml():
     return result_config
 
 
-def check_all_folders():
+def CheckAllFolders():
     if not os.path.exists(os.path.join('output', 'logs')):
         os.makedirs(os.path.join('output', 'logs'))
 
@@ -38,7 +38,8 @@ def UserURLGenerator(current_url, message_request):
     url_dict = config['url_dict']
     result = current_url
     try:
-        result = current_url + url_dict[message_request] + '/'
+        if url_dict[message_request] not in current_url:
+            result = current_url + url_dict[message_request] + '/'
     except Exception as e:
         print(e)
         pass
@@ -49,15 +50,21 @@ def UserParamGenerator(current_dict, message_request):
     logging.info(f'UserParamGenerator {message_request}')
     config = load_config_yaml()
     params_dict = config['params_dict']
-    result = current_dict
     try:
-        if current_dict != '':
-            result = '&' + current_dict + params_dict[message_request]
-        else:
-            result = current_dict + params_dict[message_request]
-    except TypeError as e:
+        current_dict[params_dict[message_request]] = ''
+    except:
         pass
         # logging.warning(f'Error - {e}')
-    return result
+    return current_dict
 
 
+def ResetGlobalBariables():
+    pass
+    # FIXME: take out all of the variables needed to be reset
+    # global user_request_url, user_request_params, current_state, current_advert, krisha_ads
+
+
+def CommandToLink(ctl_user_request_url, ctl_user_request_params, ctl_message):
+    ctl_user_request_url = UserURLGenerator(current_url=ctl_user_request_url, message_request=ctl_message)
+    ctl_user_request_params = UserParamGenerator(current_dict=ctl_user_request_params, message_request=ctl_message)
+    return ctl_user_request_url, ctl_user_request_params

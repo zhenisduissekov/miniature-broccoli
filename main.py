@@ -5,16 +5,18 @@
 from db import MysqlDB
 from utils.files import load_config_yaml, UserURLGenerator, UserParamGenerator
 from utils.resources import KrishaWeb
-import my_logger
 import telebot
-from my_logger import logger_config_with_output
-from utils.files import check_all_folders
+from my_logger import LoggerConfigWithOutput
+from utils.files import CheckAllFolders, ResetGlobalBariables, CommandToLink
 
 config = load_config_yaml()
 bot = telebot.TeleBot(config['TOKEN'])
 user_request_url = 'https://krisha.kz/'
-user_request_params = {}
+user_request_params = {'page': 1}
 current_state = -1
+current_advert = 1
+current_advert_total = 1
+krisha_ads = None
 
 
 @bot.message_handler(commands=['start'])
@@ -48,30 +50,42 @@ def help_command(message):
 @bot.message_handler(content_types='text')
 def menu_command(message):
     logging.info('menu_command')
-    global user_request_url, user_request_params, current_state
-    user_request_url = UserURLGenerator(current_url=user_request_url, message_request=message.text)
-    user_request_params = UserParamGenerator(current_dict={}, message_request=message.text)
+    global user_request_url, user_request_params, current_state, current_advert, krisha_ads, current_advert_total
     markup = telebot.types.ReplyKeyboardMarkup()
+    user_request_url, user_request_params = CommandToLink(user_request_url, user_request_params, message.text)
+    print(user_request_url, user_request_params)
     current_state += 1
-    if message.text in ['menu', 'НАЗАД К ГЛАВНОМУ МЕНЮ?']:
-        markup.row(*config['MENU_0'][1::])
-        markup.row('НАЗАД К ГЛАВНОМУ МЕНЮ?')
-        user_request_url = 'https://krisha.kz/'
-        user_request_params = {}
+    if message.text in ['menu', 'НАЗАД К ГЛАВНОМУ МЕНЮ']:
+        user_request_url = 'https://krisha.kz/'     # TODO: take these variables to function in files.py
+        user_request_params = {'page': 1}
         current_state = 0
+        current_advert = 1
+        current_advert_total = 1
+        markup.row(*config['MENU_0'][1::])
+        markup.row('НАЗАД К ГЛАВНОМУ МЕНЮ')
         bot.send_message(message.chat.id, config['MENU_0'][0], reply_markup=markup)
-    elif message.text == 'ПОКАЗАТЬ РЕЗУЛЬТАТ?':
-        logging.info('Отправляю запрос')
-        markup.row('ПОКАЗАТЬ ЕЩЕ?', 'НАЗАД К ГЛАВНОМУ МЕНЮ?')
-        print(f'Requesting {user_request_url}, {user_request_params}')
-        krisha_ads = KrishaWeb(user_request_url)
-        request = krisha_ads.adverts
-        print(krisha_ads.adverts)
-        for i in krisha_ads.adverts:
-            print(krisha_ads.adverts[i].advert_id)
-            bot.send_message(message.chat.id, str(i) + 'https://krisha.kz' + krisha_ads.adverts[i].image, reply_markup=markup)
-            # if i > 5:
-            #     break
+    elif message.text in ['ПОКАЗАТЬ РЕЗУЛЬТАТ', 'ПОКАЗАТЬ ЕЩЕ']:
+        markup.row('ПОКАЗАТЬ ЕЩЕ', 'НАЗАД К ГЛАВНОМУ МЕНЮ')
+        if current_advert == 1:
+            logging.info(f'Requesting {user_request_url}, {user_request_params}')
+            krisha_ads = KrishaWeb(user_request_url, params=user_request_params)
+        try:
+            for i in range(current_advert, 3 + current_advert):
+                print(krisha_ads.adverts[i].advert_id)
+                bot.send_message(message.chat.id,
+                                 str(current_advert_total) + '. https://krisha.kz' + krisha_ads.adverts[i].image,
+                                 reply_markup=markup)
+                current_advert = i
+                current_advert_total += 1
+            current_advert += 1
+        except Exception as e:
+            print(e)
+            logging.warning(f'список закончился')
+            bot.send_message(message.chat.id, 'Запросить еще объявления?', reply_markup=markup)
+            current_advert = 1
+            user_request_params['page'] += 1
+            print(f"user_request_params[page] = {user_request_params['page']}")
+            krisha_ads = KrishaWeb(user_request_url, params=user_request_params)
     else:
         try:
             markup.row(*config['MENU_' + str(current_state)][1:4])
@@ -79,14 +93,14 @@ def menu_command(message):
             markup.row(*config['MENU_' + str(current_state)][8:10])
             bot.send_message(message.chat.id, config['MENU_' + str(current_state)][0], reply_markup=markup)
         except KeyError:
-            logging.warning(f'Нет такого меню MENU_{current_state}')
-            markup.row('ПОКАЗАТЬ РЕЗУЛЬТАТ?', 'НАЗАД К ГЛАВНОМУ МЕНЮ?')
+            logging.warning(f'Нет такого MENU_{current_state}')
+            markup.row('ПОКАЗАТЬ РЕЗУЛЬТАТ', 'НАЗАД К ГЛАВНОМУ МЕНЮ')
             bot.send_message(message.chat.id, 'ВАШ ЗАПРОС СФОРМИРОВАН', reply_markup=markup)
 
 
 if __name__ == '__main__':
-    check_all_folders()
-    logging = logger_config_with_output()
+    CheckAllFolders()
+    logging = LoggerConfigWithOutput()
     logging.info('Телеграм бот запущен')
     bot.polling(none_stop=True)
 
